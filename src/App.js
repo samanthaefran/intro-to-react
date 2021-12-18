@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Player from './components/Player';
+import Board from './components/Board';
+
+// components return a part or all of the user interface
+// a component takes data as input and renders that data as a user interface
+
+// F(D) => V aka user interface (UI)
+//  we use props to transmit or provide data to our components
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+    <Header />
+    <div>
+    <Player whichPlayer="X" />
+    <Player whichPlayer="O" />
     </div>
+    <Board />
+    <Footer /> 
+    </div>
+
   );
+    
 }
 
 export default App;
